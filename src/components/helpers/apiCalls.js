@@ -12,10 +12,18 @@ export const callFetch = async url => {
   }
 };
 
+export const getMembers = async url => {
+  const member = await callFetch(url);
+
+  return Promise.all(member);
+};
+
 export const getHouses = async () => {
   const fetchHouseData = await callFetch('http://localhost:3001/api/v1/houses');
 
   const houseMap = await fetchHouseData.map(async house => {
+    //const members = getMembers(house.swornMembers)
+
     return {
       name: house.name,
       coatOfArms: house.coatOfArms,
