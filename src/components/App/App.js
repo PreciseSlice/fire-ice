@@ -1,9 +1,11 @@
 import React, { Component } from 'react';
-import PropTypes, { shape, func, string } from 'prop-types';
+import PropTypes from 'prop-types'
 import logo from './logo.svg';
 import './App.css';
 import { connect } from 'react-redux';
 import { fakeAction } from '../../actions';
+import { callFetch } from '../helpers/apiCalls';
+
 class App extends Component {
 
   render() {
@@ -25,8 +27,8 @@ class App extends Component {
 }
 
 App.propTypes = {
-  fake: shape({ fake: string }),
-  fakeAction: func.isRequired
+  //fake: PropTypes.shape({ fake: PropTypes.string }),
+  fakeAction: PropTypes.func.isRequired
 };
 
 const mapStateToProps = ({ fake }) => ({ fake });
