@@ -1,5 +1,7 @@
-export const fake = (state='this is a fake action', action) => {
+export const houseDataReducer = (state=[], action) => {
   switch (action.type) {
+  case 'SET_HOUSE_DATA':
+    return action.houseData
   default:
     return state;
   }
