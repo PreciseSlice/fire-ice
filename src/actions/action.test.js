@@ -1,3 +1,4 @@
+/* eslint-disable */
 import * as actions from './index';
 import { createStore } from 'redux';
 import rootReducer from '../reducers/root-reducer';
