@@ -1,4 +1,4 @@
-export const houseDataReducer = (state=[], action) => {
+const houseDataReducer = (state=[], action) => {
   switch (action.type) {
   case 'SET_HOUSE_DATA':
     return action.houseData
@@ -6,3 +6,5 @@ export const houseDataReducer = (state=[], action) => {
     return state;
   }
 };
+
+export default houseDataReducer;
