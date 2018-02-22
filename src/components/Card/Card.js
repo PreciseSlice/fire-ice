@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 //import './Card.css';
 
-const Card = ({ data }) => {
+export const Card = ({ data }) => {
   const {
     name,
     coatOfArms,
