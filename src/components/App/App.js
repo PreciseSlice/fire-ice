@@ -9,9 +9,6 @@ import wolf from './wolf.gif';
 import CardContainer from '../CardContainer/CardContainer';
 
 export class App extends Component {
-  constructor(props) {
-    super(props);
-  }
 
   async componentDidMount() {
     const { setHouseData } = this.props;
