@@ -12,7 +12,7 @@ export const callFetch = async url => {
   }
 }
 
-export const getHouses = async url => {
+export const getHouses = async () => {
   const fetchHouseData = await callFetch('http://localhost:3001/api/v1/houses');
   
   return Promise.all(fetchHouseData);
