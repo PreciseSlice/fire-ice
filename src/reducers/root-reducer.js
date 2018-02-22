@@ -1,9 +1,8 @@
 import { combineReducers } from 'redux';
-import { fake } from './fake-reducer';
+import { houseDataReducer } from './house-data-reducer';
 
 const rootReducer = combineReducers({
-  fake
+  houseDataReducer
 });
-
 
 export default rootReducer;
