@@ -10,14 +10,13 @@ describe('actions', () => {
     {
       house: 'lannister'
     }
-  ]
+  ];
 
   it('should reurn a type of SET_HOUSE_DATA with the housData payload', () => {
     const expected = {
       type: 'SET_HOUSE_DATA',
       houseData
-    }
-    expect(actions.setHouseData(houseData)).toEqual(expected)
-  })
-
-})
+    };
+    expect(actions.setHouseData(houseData)).toEqual(expected);
+  });
+});
