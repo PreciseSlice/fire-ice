@@ -14,9 +14,8 @@ export class App extends Component {
 
   async componentDidMount() {
     const { setHouseData } = this.props;
-
+  
     const houseData = await getHouses()
-    console.log(await getHouses());
     
     setHouseData(houseData)
   }
@@ -45,14 +44,15 @@ App.propTypes = {
 };
 
 export const mapStateToProps = state => ({
-   houseData: state.houseData 
+   houseData: state.houseData,
+   log: console.log(state.houseData)
+    
 });
 
 
-const mapDispatchToProps = dispatch => ({
-    setHouseData: houseData => {
-      dispatch(setHouseData(houseData))
-    }
+export const mapDispatchToProps = dispatch => ({
+    setHouseData: houseData => 
+      dispatch(setHouseData(houseData))  
 })
 
 export default connect(mapStateToProps, mapDispatchToProps)(App);
