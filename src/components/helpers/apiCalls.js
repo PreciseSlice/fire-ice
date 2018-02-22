@@ -15,9 +15,17 @@ export const callFetch = async url => {
 export const getHouses = async () => {
   const fetchHouseData = await callFetch('http://localhost:3001/api/v1/houses');
   
-  return Promise.all(fetchHouseData);
+  const houseMap = await fetchHouseData.map( async house => {
+    return {
+      name: house.name,
+      coatOfArms: house.coatOfArms,
+      words: house.words,
+      titles: house.titles,
+      seats: house.seats,
+      founded: house.founded,
+      ancestralWeapons: house.ancestralWeapons
+    }
+  })
+  
+  return Promise.all(houseMap);
 }
-
-
-
-
