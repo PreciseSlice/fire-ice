@@ -31,8 +31,12 @@ App.propTypes = {
   fakeAction: PropTypes.func.isRequired
 };
 
-const mapStateToProps = ({ fake }) => ({ fake });
-const mapDispatchToProps = dispatch => ({ fakeAction:
-  () => dispatch(fakeAction())
+export const mapStateToProps = state => ({
+   houseData: state.houseData 
 });
+
+const mapDispatchToProps = dispatch => ({ setHouseData:
+  () => dispatch(setHouseData(houseData))
+});
+
 export default connect(mapStateToProps, mapDispatchToProps)(App);
